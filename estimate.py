@@ -11,13 +11,13 @@ def wallis(iteration_num):
     return pi_estimate
 
 def monte_carlo(iteration_num):
-    pi_estimate,circle_area = 0,0
+    pi_estimate,inside_circle = 0,0
     for i in range(iteration_num):
         x = random.random()*2-1
         y = random.random()*2-1
         if(pow(x,2) + pow(y,2) <= 1):
-            circle_area += 1
-    pi_estimate = (4 * circle_area) / iteration_num
+            inside_circle += 1
+    pi_estimate = (4 * inside_circle) / iteration_num
     return pi_estimate
 
 class TestWallis(unittest.TestCase):
