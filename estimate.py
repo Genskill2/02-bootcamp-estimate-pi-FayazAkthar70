@@ -2,6 +2,13 @@ import math
 import unittest
 
 class TestWallis(unittest.TestCase):
+    def wallis(self, interation_number):
+        pi_estimate = 1
+        for i in range(1,interation_number+1):
+            est_for_ith_iteration = (4*i*i) / ((4*i*i) - 1)
+            pi_estimate *= est_for_ith_iteration 
+        return pi_estimate
+
     def test_low_iters(self):
         for i in range(0, 5):
             pi = wallis(i)
