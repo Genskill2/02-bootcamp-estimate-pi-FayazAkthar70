@@ -2,9 +2,9 @@ import math
 import unittest
 
 class TestWallis(unittest.TestCase):
-    def wallis(self, interation_number):
+    def wallis(iteration_num):
         pi_estimate = 1
-        for i in range(1,interation_number+1):
+        for i in range(1,iteration_num+1):
             est_for_ith_iteration = (4*i*i) / ((4*i*i) - 1)
             pi_estimate *= est_for_ith_iteration 
         return pi_estimate
